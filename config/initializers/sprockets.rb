@@ -63,7 +63,7 @@ module Sprockets
         end
 
         def preview_by_admin?
-          @view.present? && @view.cookies[:preview].present?
+         @view.present? && @view.cookies.present? && @view.cookies[:preview].present? rescue false
         end
 
       end
